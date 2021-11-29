@@ -4,6 +4,7 @@ import java.util.Scanner;
 
 import CredentialService.GenerateEmailAddress;
 import CredentialService.GeneratePassword;
+import CredentialService.ShowCredentials;
 import Employee.Employee;
 
 
@@ -51,20 +52,14 @@ public class DriverClass {
 		}
 		
 		GeneratePassword generatePassword = new GeneratePassword();
+		String generatedPassword = generatePassword.genertePassword();	
 		
-		String generatedEmail = generatePassword.generateEmailAddress(firstName, lastName, departmentName);
-		String generatedPassword = generatePassword.genertePassword();
+		GenerateEmailAddress generateEmail = new GenerateEmailAddress();
+		String generatedEmail = generateEmail.generateEmailAddress(firstName, lastName, departmentName);
 		
-		generatePassword.showCredentials(employeeObject, generatedEmail, generatedPassword);
+		ShowCredentials showCredential = new ShowCredentials();		
+		showCredential.showCredentials(employeeObject, generatedEmail, generatedPassword);
 		
-//		Employee employeeObject1 = new Employee(firstName, lastName);
-				
-//		GenerateEmailAddress generatedEmail = new GenerateEmailAddress();
-//		GeneratePassword generatedPassword = new GeneratePassword();
-		
-//		String generatedEmail1 = credentialService.generatedEmail(firstName, lastName, departmentName);
-//		String generatedPassword1 = credentialService.generatedPassword();
-//		
-//		credentialService.showCredential(employeeObject1, generatedEmail1, generatedPassword1);
+
 		}
 }

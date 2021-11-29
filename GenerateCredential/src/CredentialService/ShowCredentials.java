@@ -1,12 +1,14 @@
 package CredentialService;
 
+import Employee.Employee;
 
 public class ShowCredentials {
-//	public void showCredential(Employee employeeObject, String generatedEmailAddress, String generatedPassword) {
-//	
-//		System.out.println("Dear " + employeeObject .getFirstName() + "You credentials are: ");
-//		System.out.println("Email is: " + generatedEmailAddress);
-//		System.out.println("Password is:" + generatedPassword);
-//		
-//	}
+	
+	public void showCredentials(Employee employeeObject, String email, String generatedPassword) {
+		
+		System.out.println("Dear " + employeeObject.getFirstName() + " Your credentials: ");
+		System.out.println("Your Email is: " + email);
+		System.out.println("Your Password is:" + generatedPassword);
+		
+	}
 }
