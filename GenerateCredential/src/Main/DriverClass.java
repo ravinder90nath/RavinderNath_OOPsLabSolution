@@ -48,11 +48,5 @@ public class DriverClass {
 		
 		}
 		
-		GeneratePassword passwordService = new GeneratePassword();
-		
-		String generatedEmail = passwordService.generateEmailAddress(firstName, lastName, departmentName);
-		String generatedPassword = credentialService.generatedPassword();
-		
-		credentialService.showCredential(employeeObject, generatedEmail, generatedPassword);
 		}
 }
