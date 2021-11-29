@@ -2,18 +2,22 @@ package Main;
 
 import java.util.Scanner;
 
+import Employee.Employee;
+
 
 public class DriverClass {
 	public static void main(String[] argh) {
 			
 		Scanner scanner = new Scanner(System.in);
-		System.out.println("Welcome to GL, lets generate your credentials for you!: ");
+		System.out.println("Welcome to GL, generate credentials for you: ");
 		System.out.println("Please enter your first name: ");
 		String firstName = scanner.nextLine();
 		System.out.println("Please enter your Last name: ");
 		String lastName = scanner.nextLine();
 		
-		System.out.println("please enter the department from the following");
+		Employee employeeObject = new Employee(firstName, lastName);
+		
+		System.out.println("please choos department:");
 		System.out.println("1: Tech");
 		System.out.println("2: Admin");
 		System.out.println("3: HR");
@@ -43,9 +47,12 @@ public class DriverClass {
 				System.out.println("Enter valid value");
 		
 		}
-
 		
+		GeneratePassword passwordService = new GeneratePassword();
 		
+		String generatedEmail = passwordService.generateEmailAddress(firstName, lastName, departmentName);
+		String generatedPassword = credentialService.generatedPassword();
 		
+		credentialService.showCredential(employeeObject, generatedEmail, generatedPassword);
 		}
 }

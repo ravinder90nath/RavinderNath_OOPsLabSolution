@@ -1,7 +1,5 @@
 package Employee;
 
-import Main.DriverClass;
-
 public class Employee {
 	
 	private String firstName;
@@ -17,16 +15,19 @@ public class Employee {
     	this.firstName= firstName;
     }
     
-    public void setLastName(String lastName) {
-    	this.lastName= lastName;
-    }
-    
     public String getFirstName() {
     	return this.firstName; 
     }
     
+      
     public String getLastName() {
     	return this.lastName; 
     }
+    public void setLastName(String lastName) {
+    	this.lastName= lastName;
+    }
+    
+   
+  
    
 }
