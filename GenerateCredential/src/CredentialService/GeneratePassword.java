@@ -15,12 +15,12 @@ public class GeneratePassword {
 		
 		
 		Random rendomize = new Random();
-		char[] password = new char[8];
+		char[] password = new char[10];
 		
 
 		int lengthofValue = values.length(); 
 		
-		for(int i=0;i<8;i++) {
+		for(int i=0;i<10;i++) {
 			int randomNextInteger = rendomize.nextInt(lengthofValue);
 			password[i]=values.charAt(randomNextInteger);
 		}
