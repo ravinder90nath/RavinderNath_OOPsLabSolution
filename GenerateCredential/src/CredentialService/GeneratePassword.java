@@ -12,20 +12,16 @@ public class GeneratePassword {
 		String num = "1234567890";
 		
 		String values = capitalLatter + smallLatters + specialChar + num;
-		//ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz!@#$%^&*()1234567890
 		
 		
 		Random rendomize = new Random();
 		char[] password = new char[8];
 		
 
-		int lengthofValue = values.length(); //72
-		//System.out.println("lengthofvalu: " + lengthofValue);
+		int lengthofValue = values.length(); 
 		
 		for(int i=0;i<8;i++) {
 			int randomNextInteger = rendomize.nextInt(lengthofValue);
-			//System.out.println("rendomnextint: " + randomNextInteger);
-			//System.out.println("rendomnextint: " + values.charAt(randomNextInteger));
 			password[i]=values.charAt(randomNextInteger);
 		}
 		return generatedPassword;
