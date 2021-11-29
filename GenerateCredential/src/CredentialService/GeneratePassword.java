@@ -5,33 +5,31 @@ import java.util.Random;
 public class GeneratePassword {
 	
 	
-	
-	
 	public String genertePassword() {
 		String generatedPassword = "";
 		
-		String capitalLetter = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-		String specialChar = "!@#$%^&*()";
-		String smallLetters = "abcdefghijklmnopqrstuvwxyz";
+		String capitalletter = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+		String specialsymbols = "!@#$%^&*()";
+		String smallletter = "abcdefghijklmnopqrstuvwxyz";
 		String number = "1234567890";
 		
-		String values = capitalLetter + smallLetters + specialChar + number;
+		String values = capitalletter + smallletter + specialsymbols + number;
 		
 		
 		Random rendomize = new Random();
 		char[] password = new char[10];
 		
 
-		int lengthofValue = values.length(); 		
-//		System.out.println(lengthofValue);
+		int lengthCount = values.length(); 		
+//		System.out.println(lengthCount);
 //		System.out.println();
 		for(int i=0;i<10;i++) {
-			int randomNextInteger = rendomize.nextInt(lengthofValue);
-			password[i]=values.charAt(randomNextInteger);
+			int rendomText = rendomize.nextInt(lengthCount);
+			password[i]=values.charAt(rendomText);
 			
-//			
-//			System.out.print(randomNextInteger +" ");
-//			System.out.println(values.charAt(randomNextInteger));
+			
+//			System.out.print(rendomText +" ");
+//			System.out.println(values.charAt(rendomText));
 		}
 		generatedPassword = password.toString();
 		return generatedPassword;

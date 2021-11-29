@@ -4,11 +4,11 @@ import Employee.Employee;
 
 public class ShowCredentials {
 	
-	public void showCredentials(Employee employeeObject, String email, String generatedPassword) {
+	public void showCredentials(Employee employeeObj, String email, String Password) {
 		
-		System.out.println("Dear " + employeeObject.getFirstName() + " Your credentials: ");
+		System.out.println("Dear " + employeeObj.getFirstName() + " Your credentials: ");
 		System.out.println("Your Email is: " + email);
-		System.out.println("Your Password is:" + generatedPassword);
+		System.out.println("Your Password is:" + Password);
 		
 	}
 }

@@ -18,7 +18,7 @@ public class DriverClass {
 		System.out.println("Please enter your Last name: ");
 		String lastName = scanner.nextLine();
 		
-		Employee employeeObject = new Employee(firstName, lastName);
+		Employee employeeObj = new Employee(firstName, lastName);
 		
 		System.out.println("please choose department:");
 		System.out.println("1: for Tech");
@@ -52,13 +52,13 @@ public class DriverClass {
 		}
 		
 		GeneratePassword generatePassword = new GeneratePassword();
-		String generatedPassword = generatePassword.genertePassword();	
+		String Password = generatePassword.genertePassword();	
 		
 		GenerateEmailAddress generateEmail = new GenerateEmailAddress();
-		String generatedEmail = generateEmail.generateEmailAddress(firstName, lastName, departmentName);
+		String Email = generateEmail.generateEmailAddress(firstName, lastName, departmentName);
 		
 		ShowCredentials showCredential = new ShowCredentials();		
-		showCredential.showCredentials(employeeObject, generatedEmail, generatedPassword);
+		showCredential.showCredentials(employeeObj, Email, Password);
 		
 
 		}
